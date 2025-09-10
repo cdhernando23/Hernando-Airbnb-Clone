@@ -1,0 +1,124 @@
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 24px;
+  margin-top: 80px; /* Account for fixed navbar */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #dddddd;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 850px;
+  width: 100%;
+  transition: box-shadow 0.2s ease;
+}
+
+.search-bar:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.search-section {
+  flex: 1;
+  padding: 16px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.search-section:hover {
+  background-color: #f7f7f7;
+}
+
+.search-section:first-child {
+  border-radius: 32px 0 0 32px;
+}
+
+.search-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #000;
+  background: transparent;
+  width: 100%;
+  font-weight: 400;
+}
+
+.search-input::placeholder {
+  color: #717171;
+  font-weight: 400;
+}
+
+.search-divider {
+  width: 1px;
+  height: 32px;
+  background: #dddddd;
+}
+
+.search-button {
+  background: #ff5a5f;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  margin: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+  background: #e00007;
+}
+
+.search-icon {
+  font-size: 16px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 16px;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+  
+  .search-section {
+    border-radius: 0 !important;
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .search-section:last-child {
+    border-bottom: none;
+  }
+  
+  .search-divider {
+    display: none;
+  }
+  
+  .search-button {
+    border-radius: 0 0 16px 16px;
+    width: 100%;
+    height: 56px;
+    margin: 0;
+  }
+}
